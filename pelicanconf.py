@@ -1,12 +1,12 @@
-AUTHOR = 'Ponyboy'
+AUTHOR = "Ponyboy"
 SITENAME = "Ponyboy's WebPage"
 SITEURL = ""
 
 PATH = "content"
 
-TIMEZONE = 'America/Indiana/Indianapolis'
+TIMEZONE = "America/Indiana/Indianapolis"
 
-DEFAULT_LANG = 'En'
+DEFAULT_LANG = "En"
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -33,3 +33,4 @@ DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
+
