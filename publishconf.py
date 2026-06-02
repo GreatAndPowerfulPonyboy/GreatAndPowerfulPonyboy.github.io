@@ -7,7 +7,8 @@ import sys
 sys.path.append(os.curdir)
 from pelicanconf import *
 
-PATHS = {"content": "content"}
+PATH = "content"
+PATHS = ["content"]
 # If your site is available via HTTPS, make sure SITEURL begins with https://
 SITEURL = "https://greatandpowerfulponyboy.github.io"
 RELATIVE_URLS = False
