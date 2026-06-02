@@ -1,0 +1,51 @@
+name: Deploy to GitHub Pages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Configure GitHub Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Install requirements
+        run: pip install "pelican[markdown]" ghp-import
+
+      - name: Build Pelican site
+        run: |
+          pelican --settings publishconf.py --output output
+
+      - name: Fix output permissions
+        run: chmod -R +rX output
+
+      - name: Archive site artifact
+        run: |
+          tar -C output -cvf $RUNNER_TEMP/artifact.tar .
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v5
+        with:
+          name: github-pages
+          path: ${{ runner.temp }}/artifact.tar
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
+        with:
+          artifact: ${{ runner.temp }}/artifact.tar
