@@ -12,4 +12,7 @@ jobs:
       id-token: "write"
     with:
       settings: "publishconf.py"
-      extra_args: '--path content --output output --extra-settings SITEURL="https://greatandpowerfulponyboy.github.io'
+      output-path: "output/"
+      siteurl: "https://greatandpowerfulponyboy.github.io"
+      requirements: "pelican[markdown] ghp-import"
+      deploy: true
