@@ -12,3 +12,4 @@ jobs:
       id-token: "write"
     with:
       settings: "publishconf.py"
+      extra_args: '--path content --output output --extra-settings SITEURL="https://greatandpowerfulponyboy.github.io'
