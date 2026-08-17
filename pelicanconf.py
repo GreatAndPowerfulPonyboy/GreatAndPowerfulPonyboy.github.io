@@ -17,8 +17,10 @@ AUTHOR_FEED_RSS = None
 
 # Blogroll
 LINKS = (
-    "A programming blog that I think is really neat",
-    "https://www.scattered-thoughts.net/writing/emotional-management/",
+    (
+        "A programming blog that I think is really neat",
+        "https://www.scattered-thoughts.net/writing/emotional-management/",
+    ),
 )
 
 # Social widget
