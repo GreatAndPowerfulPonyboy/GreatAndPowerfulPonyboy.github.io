@@ -17,20 +17,17 @@ AUTHOR_FEED_RSS = None
 
 # Blogroll
 LINKS = (
-    ("Pelican", "https://getpelican.com/"),
-    ("Python.org", "https://www.python.org/"),
-    ("Jinja2", "https://palletsprojects.com/p/jinja/"),
-    ("You can modify those links in your config file", "#"),
+    "A programming blog that I think is really neat",
+    "https://www.scattered-thoughts.net/writing/emotional-management/",
 )
 
 # Social widget
 SOCIAL = (
-    ("You can add links in your config file", "#"),
-    ("Another social link", "#"),
+    ("My Github Page", "https://github.com/GreatAndPowerfulPonyboy"),
+    ("Links to stuff I've found notable ", "https://ln.ht/~GoldPonyboy"),
 )
 
 DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
-
